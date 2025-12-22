@@ -44,6 +44,12 @@
 
         // ConstructorOverloading with Logs
         Oops.ConstructorLogHistory o1 = new Oops.ConstructorLogHistory(12,"ankit","cse");
+
+        // ConstructorErrorLoading
+        Oops.ConstructorErrorLoading er = new Oops.ConstructorErrorLoading(
+            -12,
+            ""
+        );
     }
 
 }
