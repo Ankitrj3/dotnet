@@ -9,9 +9,9 @@ namespace Oops
         public string Requirement { get; set; }
         public string LogHistory { get; set; }
 
-             public ConstructorLogHistory()
+        public ConstructorLogHistory()
         {
-            LogHistory = "";
+
             LogHistory += $"Object created at {DateTime.Now}{Environment.NewLine}";
         }
 
