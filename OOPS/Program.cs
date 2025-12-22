@@ -50,6 +50,10 @@
             -12,
             ""
         );
-    }
+        // Inheritance
+        Oops.Derived1 ni = new Oops.Derived1();
+        string fulldetails = ni.GetFullDetails(120007777,34);
+        Console.WriteLine(fulldetails);
 
+    }
 }
