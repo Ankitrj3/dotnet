@@ -13,7 +13,7 @@ namespace Oops
     {
         public string GetDetails(int Id)
         {
-            return $"You Account Id {Id}";
+            return $"You Id {Id}";
         }
     }
     public class Derived1 : Derived
