@@ -1,0 +1,14 @@
+/Users/ankitrj3/Desktop/dotnet/PracticeQuestion/obj/Debug/net10.0/PracticeQuestion.GeneratedMSBuildEditorConfig.editorconfig
+/Users/ankitrj3/Desktop/dotnet/PracticeQuestion/obj/Debug/net10.0/PracticeQuestion.AssemblyInfoInputs.cache
+/Users/ankitrj3/Desktop/dotnet/PracticeQuestion/obj/Debug/net10.0/PracticeQuestion.AssemblyInfo.cs
+/Users/ankitrj3/Desktop/dotnet/PracticeQuestion/obj/Debug/net10.0/PracticeQuestion.csproj.CoreCompileInputs.cache
+/Users/ankitrj3/Desktop/dotnet/PracticeQuestion/bin/Debug/net10.0/PracticeQuestion
+/Users/ankitrj3/Desktop/dotnet/PracticeQuestion/bin/Debug/net10.0/PracticeQuestion.deps.json
+/Users/ankitrj3/Desktop/dotnet/PracticeQuestion/bin/Debug/net10.0/PracticeQuestion.runtimeconfig.json
+/Users/ankitrj3/Desktop/dotnet/PracticeQuestion/bin/Debug/net10.0/PracticeQuestion.dll
+/Users/ankitrj3/Desktop/dotnet/PracticeQuestion/bin/Debug/net10.0/PracticeQuestion.pdb
+/Users/ankitrj3/Desktop/dotnet/PracticeQuestion/obj/Debug/net10.0/PracticeQuestion.dll
+/Users/ankitrj3/Desktop/dotnet/PracticeQuestion/obj/Debug/net10.0/refint/PracticeQuestion.dll
+/Users/ankitrj3/Desktop/dotnet/PracticeQuestion/obj/Debug/net10.0/PracticeQuestion.pdb
+/Users/ankitrj3/Desktop/dotnet/PracticeQuestion/obj/Debug/net10.0/PracticeQuestion.genruntimeconfig.cache
+/Users/ankitrj3/Desktop/dotnet/PracticeQuestion/obj/Debug/net10.0/ref/PracticeQuestion.dll
