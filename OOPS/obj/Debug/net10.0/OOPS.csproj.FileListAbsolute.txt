@@ -12,3 +12,4 @@
 /Users/ankitrj3/Desktop/dotnet/OOPS/obj/Debug/net10.0/OOPS.pdb
 /Users/ankitrj3/Desktop/dotnet/OOPS/obj/Debug/net10.0/OOPS.genruntimeconfig.cache
 /Users/ankitrj3/Desktop/dotnet/OOPS/obj/Debug/net10.0/ref/OOPS.dll
+/Users/ankitrj3/Desktop/dotnet/OOPS/obj/Debug/net10.0/OOPS.sourcelink.json

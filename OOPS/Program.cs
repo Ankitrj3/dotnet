@@ -42,7 +42,8 @@
         Oops.ConstructorOverloading1 op1 = new Oops.ConstructorOverloading1();
         Oops.ConstructorOverloading1 op2 = new Oops.ConstructorOverloading1(12, 34);
 
-
+        // ConstructorOverloading with Logs
+        Oops.ConstructorLogHistory o1 = new Oops.ConstructorLogHistory(12,"ankit","cse");
     }
 
 }
