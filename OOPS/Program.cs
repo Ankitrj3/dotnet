@@ -1,7 +1,18 @@
-﻿public class Program
+﻿/// <summary>
+/// OOPS Program - Demonstrates Object-Oriented Programming concepts
+/// This program showcases inheritance, constructor overloading, method overriding, and error handling
+/// </summary>
+public class Program
 {
+    /// <summary>
+    /// Main entry point demonstrating various OOP concepts
+    /// Creates instances of different classes to show inheritance hierarchy,
+    /// constructor overloading, method overriding, and exception handling
+    /// </summary>
     public static void Main()
     {
+        // Inheritance Example - Creating a PG (Post Graduate) student
+        // PG inherits from UG, which inherits from StudentInfo (3-level inheritance)
         PG student = new PG(
             name: "Ankit",
             reg_no: 101,
@@ -10,6 +21,7 @@
             department: "Computer Science"
         );
 
+        // Display student information using inherited properties
         Console.WriteLine("---- Student Details ----");
         Console.WriteLine($"Name       : {student.Name}");
         Console.WriteLine($"Reg No     : {student.Reg_no}");
@@ -17,21 +29,30 @@
         Console.WriteLine($"College    : {student.College}");
         Console.WriteLine($"Department : {student.Department}");
 
+        // Constructor Overloading Examples
+        // Default constructor (no parameters)
         Oops.ConstructorOverloading co = new Oops.ConstructorOverloading();
+        
+        // Constructor with one parameter (id only)
         Oops.ConstructorOverloading co1 = new Oops.ConstructorOverloading(
             12000999
         );
         Console.WriteLine(co1.id);
+        
+        // Constructor with two parameters (id and name) - includes exception handling
         try{
         Oops.ConstructorOverloading co2 = new Oops.ConstructorOverloading(
             12233444,
-            "Shashi Mani IDIOT"
+            "Shashi Mani IDIOT" // This will throw an exception due to "IDIOT" validation
         );
         Console.WriteLine(co2.id+" "+co2.name);
         }catch(Exception e)
         {
+            // Handle the exception thrown by constructor validation
             Console.WriteLine(e.Message);
         }
+        
+        // Constructor with three parameters (id, name, and requirement)
         Oops.ConstructorOverloading co3 = new Oops.ConstructorOverloading(
             12000777,
             "ANkit Ranjan",
@@ -39,25 +60,28 @@
         );
         Console.WriteLine(co3.id+" "+co3.name+" "+co3.requirement);
 
-        Oops.ConstructorOverloading1 op1 = new Oops.ConstructorOverloading1();
-        Oops.ConstructorOverloading1 op2 = new Oops.ConstructorOverloading1(12, 34);
+        // Another Constructor Overloading Example
+        Oops.ConstructorOverloading1 op1 = new Oops.ConstructorOverloading1(); // Default constructor
+        Oops.ConstructorOverloading1 op2 = new Oops.ConstructorOverloading1(12, 34); // Two parameter constructor
 
-        // ConstructorOverloading with Logs
+        // Constructor with Logging History - demonstrates constructor chaining
         Oops.ConstructorLogHistory o1 = new Oops.ConstructorLogHistory(12,"ankit","cse");
 
-        // ConstructorErrorLoading
+        // Constructor Error Loading - demonstrates error handling in constructors
         Oops.ConstructorErrorLoading er = new Oops.ConstructorErrorLoading(
-            -12,
-            ""
+            -12, // Negative ID will trigger error logging
+            ""   // Empty name will trigger error logging
         );
-        // Inheritance
+        
+        // Inheritance Example - Multi-level inheritance demonstration
         Oops.Derived1 ni = new Oops.Derived1();
         string fulldetails = ni.GetFullDetails(120007777,34);
         Console.WriteLine(fulldetails);
 
-        // Override
-        Oops.Der d = new Oops.Der();
-        string d1 = d.implementation();
+        // Method Overriding Example - Polymorphism demonstration
+        // Base class reference pointing to derived class object
+        Oops.MethodOverriding d = new Oops.Ankit();
+        string d1 = d.implementation(); // Calls overridden method in Ankit class
         Console.WriteLine(d1);
 
     }

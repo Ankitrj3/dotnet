@@ -1,10 +1,21 @@
 ﻿using System;
 using System.Diagnostics;
 
+/// <summary>
+/// HelloDotNet - A simple C# console application demonstrating basic input/output operations
+/// This program checks if a person is an adult or minor based on their age
+/// </summary>
 class Program
 {
+    /// <summary>
+    /// Main entry point of the application
+    /// Demonstrates age validation and adult/minor classification
+    /// </summary>
     static void Main()
     {
+        // Commented out code below shows a prime number checker implementation
+        // This demonstrates basic prime number algorithm using square root optimization
+        
         // Console.WriteLine("Enter your name");
         // string? name = Console.ReadLine();
 
@@ -39,16 +50,21 @@ class Program
         //     Console.WriteLine("Not Prime");
         // }
 
+        // Age validation and adult/minor classification
         Console.WriteLine("Enter the age");
-        string? input = Console.ReadLine();
+        string? input = Console.ReadLine(); // Read user input as string (nullable)
 
+        // Use TryParse for safe integer conversion to avoid exceptions
         if(int.TryParse(input, out int age))
         {
+            // Check if age is 18 or above to determine adult status
             bool isAdult = age >= 18;
+            // Use ternary operator for concise conditional output
             Console.WriteLine(isAdult ? "Adult" : "Minor");
         }
         else
         {
+            // Handle invalid input gracefully
             Console.WriteLine("Invalid input");
         }
     }
