@@ -55,5 +55,10 @@
         string fulldetails = ni.GetFullDetails(120007777,34);
         Console.WriteLine(fulldetails);
 
+        // Override
+        Oops.Der d = new Oops.Der();
+        string d1 = d.implementation();
+        Console.WriteLine(d1);
+
     }
 }
