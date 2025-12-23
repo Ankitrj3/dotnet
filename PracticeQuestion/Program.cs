@@ -6,8 +6,10 @@
 /// - Method calls and object instantiation
 /// - Mathematical calculations and validations
 /// </summary>
-class Program
+namespace PracticeQuestion
 {
+    class Program
+    {
     /// <summary>
     /// Main entry point - Demonstrates all the implemented algorithms and methods
     /// Creates instances of various classes and calls their methods to show functionality
@@ -177,7 +179,17 @@ class Program
         Console.WriteLine("26. Strong Number Test:");
         StrongNumber sn = new StrongNumber();
         sn.StrongNumberCalc();
+        Console.WriteLine();
 
-       
+        // Goto Loop Search Test: Deep nested loop search using goto to exit all levels instantly
+        Console.WriteLine("27. Goto Loop Search Test:");
+        GotoLoopSearch.Execute();
+        Console.WriteLine();
+
+        // Pascal's Triangle Test: Print Pascal's triangle using nested loops
+        Console.WriteLine("28. Pascal's Triangle Test:");
+        PascalTriangle.Execute();
+        Console.WriteLine();
     }
+}
 }
