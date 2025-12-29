@@ -190,6 +190,8 @@ namespace PracticeQuestion
         Console.WriteLine("28. Pascal's Triangle Test:");
         PascalTriangle.Execute();
         Console.WriteLine();
+
+        
     }
 }
 }
