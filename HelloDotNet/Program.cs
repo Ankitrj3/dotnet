@@ -66,9 +66,5 @@ class Program
         //     // Handle invalid input gracefully
         //     Console.WriteLine("Invalid input");
         // }
-
-        ConstructorTypes.ConstructorTypes c1 = new ConstructorTypes.ConstructorTypes();
-        ConstructorTypes.ConstructorTypes c2 = new ConstructorTypes.ConstructorTypes(12,23);
-        ConstructorTypes.ConstructorTypes c3 = new ConstructorTypes.ConstructorTypes(c2);
     }
 }
