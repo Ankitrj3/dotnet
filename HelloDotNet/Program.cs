@@ -66,5 +66,17 @@ class Program
         //     // Handle invalid input gracefully
         //     Console.WriteLine("Invalid input");
         // }
+
+        // Constructor Types Demonstration
+        Console.WriteLine("=== Constructor Types Demo ===");
+        
+        // 1. Default Constructor
+        ConstructorTypes.ConstructorTypes obj1 = new ConstructorTypes.ConstructorTypes();
+        
+        // 2. Parameterized Constructor
+        ConstructorTypes.ConstructorTypes obj2 = new ConstructorTypes.ConstructorTypes(10, 20);
+        
+        // 3. Copy Constructor
+        ConstructorTypes.ConstructorTypes obj3 = new ConstructorTypes.ConstructorTypes(obj1);
     }
 }
