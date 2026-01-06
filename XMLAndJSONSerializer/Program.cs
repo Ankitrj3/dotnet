@@ -2,6 +2,7 @@
 using System.Reflection.PortableExecutable;
 using System.Xml.Serialization;
 using System.Text.Json;
+using DeligatesFun;
 
 namespace XMLSerializer
 {
@@ -29,12 +30,17 @@ namespace XMLSerializer
             string serial = writer1.ToString();
             Console.WriteLine(serial);
 
+            // JSON Serializer
             var options = new JsonSerializerOptions
             {
                 WriteIndented = true
             };
             string json = JsonSerializer.Serialize(s1, options);
             Console.WriteLine(json);
+
+
+            Deligates dl = new Deligates();
+            dl.DelegateEx1();
         }
     }
 }
