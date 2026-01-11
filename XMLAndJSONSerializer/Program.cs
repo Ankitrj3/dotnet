@@ -29,6 +29,9 @@ namespace XMLSerializer
             x.Serialize(writer1,s1);
             string serial = writer1.ToString();
             Console.WriteLine(serial);
+            using StringReader reader = new StringReader(serial);
+            Student XmlDeSerializiation = (Student)x.Deserialize(reader);
+            Console.WriteLine($"DeSerialize value of xml name {XmlDeSerializiation.Name}");
 
             // JSON Serializer
             var options = new JsonSerializerOptions
@@ -38,6 +41,9 @@ namespace XMLSerializer
             string json = JsonSerializer.Serialize(s1, options);
             Console.WriteLine(json);
 
+            Student jsonDeSerializer = JsonSerializer.Deserialize<Student>(json);
+            Console.WriteLine($"DeSerialize value of Json age {jsonDeSerializer.Age}");
+            
 
             Deligates dl = new Deligates();
             dl.DelegateEx1();
