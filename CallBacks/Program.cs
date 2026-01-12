@@ -15,10 +15,14 @@
         {
             Console.WriteLine("CallBack Function Calling.... "+msg);
         }
+        public static void Left(string msg)
+        {
+            Console.WriteLine("Callback using Delegates. "+msg);
+        }
         public static void Main()
         {
             Printer p = new Printer();
-            CallBackUsingDelegate callBack = Show;
+            CallBackUsingDelegate callBack = Left;
             p.Print("Ankit",callBack);
         }
     }
