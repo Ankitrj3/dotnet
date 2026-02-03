@@ -4,47 +4,66 @@ using System;
 
 namespace BankAccountTests
 {
-    [TestFixture]   //  Required test attribute for class
-    public class UnitTest
+    [TestFixture]
+    public class BankAccountTests
     {
-        [Test]   //  Required test attribute
-        public void Test_Deposit_ValidAmount()
+        private const decimal InitialBalance = 1000m;
+        private const decimal SmallBalance = 500m;
+        private const decimal DepositAmount = 500m;
+        private const decimal WithdrawAmount = 400m;
+        private const decimal NegativeAmount = -200m;
+        private const decimal ExcessiveWithdrawAmount = 800m;
+
+        [Test]
+        public void Deposit_WithValidAmount_ShouldIncreaseBalance()
         {
-            Program account = new Program(1000m);
+            // Arrange
+            var bankAccount = new Program(InitialBalance);
+            var expectedBalance = InitialBalance + DepositAmount;
 
-            account.Deposit(500m);
+            // Act
+            bankAccount.Deposit(DepositAmount);
 
-            Assert.That(account.Balance, Is.EqualTo(1500m));
+            // Assert
+            Assert.That(bankAccount.Balance, Is.EqualTo(expectedBalance));
         }
 
         [Test]
-        public void Test_Deposit_NegativeAmount()
+        public void Deposit_WithNegativeAmount_ShouldThrowException()
         {
-            Program account = new Program(1000m);
+            // Arrange
+            var bankAccount = new Program(InitialBalance);
+            var expectedErrorMessage = "Deposit amount cannot be negative";
 
-            Exception ex = Assert.Throws<Exception>(() => account.Deposit(-200m));
-
-            Assert.That(ex.Message, Is.EqualTo("Deposit amount cannot be negative"));
+            // Act & Assert
+            var thrownException = Assert.Throws<Exception>(() => bankAccount.Deposit(NegativeAmount));
+            Assert.That(thrownException.Message, Is.EqualTo(expectedErrorMessage));
         }
 
         [Test]
-        public void Test_Withdraw_ValidAmount()
+        public void Withdraw_WithValidAmount_ShouldDecreaseBalance()
         {
-            Program account = new Program(1000m);
+            // Arrange
+            var bankAccount = new Program(InitialBalance);
+            var expectedBalance = InitialBalance - WithdrawAmount;
 
-            account.Withdraw(400m);
+            // Act
+            bankAccount.Withdraw(WithdrawAmount);
 
-            Assert.That(account.Balance, Is.EqualTo(600m));
+            // Assert
+            Assert.That(bankAccount.Balance, Is.EqualTo(expectedBalance));
         }
 
         [Test]
-        public void Test_Withdraw_InsufficientFunds()
+        public void Withdraw_WithInsufficientFunds_ShouldThrowException()
         {
-            Program account = new Program(500m);
+            // Arrange
+            var bankAccount = new Program(SmallBalance);
+            var expectedErrorMessage = "Insufficient funds.";
 
-            Exception ex = Assert.Throws<Exception>(() => account.Withdraw(800m));
-
-            Assert.That(ex.Message, Is.EqualTo("Insufficient funds."));
+            // Act & Assert
+            var thrownException = Assert.Throws<Exception>(() => bankAccount.Withdraw(ExcessiveWithdrawAmount));
+            Assert.That(thrownException.Message, Is.EqualTo(expectedErrorMessage));
         }
     }
 }
