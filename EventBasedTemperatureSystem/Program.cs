@@ -6,6 +6,10 @@ namespace Events
     public class TemperatureCheck
     {
         public event TemperatureHandler? TempEvent;
+        public TemperatureCheck(MainTemp mainTemp)
+        {
+            TempEvent += mainTemp.TempMain;
+        }
         public void PrintTemperature(int temp)
         {
             if (TempEvent != null)
@@ -32,10 +36,10 @@ namespace Events
     {
         public static void Main(string[] args)
         {
-            TemperatureCheck tc = new TemperatureCheck();
             MainTemp mt = new MainTemp();
+            TemperatureCheck tc = new TemperatureCheck(mt);
 
-            tc.TempEvent += mt.TempMain;
+            // tc.TempEvent += mt.TempMain;
 
             while (true)
             {
